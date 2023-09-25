@@ -45,29 +45,30 @@ kubectl apply -f .
 ## 4. Acessar a pagina do Wordpress
 Use o Traffic Port Accessor para acessar a porta 8080. Siga as imagens abaixo para visualizar:
 
-<div style="margin-top: 20px;">
-<img src="https://drive.google.com/uc?export=view&id=1tSf5hICHJFP1ajAfWJ5rYYg_bG58iTYG" alt="Traffic Port Accessor" width="500">
+<div style="margin-top: 60px;">
+<img src="https://drive.google.com/uc?export=view&id=1tSf5hICHJFP1ajAfWJ5rYYg_bG58iTYG" alt="Traffic Port Accessor" style="width: 500px;">
 </div>
 <div style="margin-top: 20px;">
-<img src="https://drive.google.com/uc?export=view&id=1hgAb12rQrumCFxwBhdJ3nQbMgdN_sK_j" alt="Acessando a porta 8080" width="500">
+<img src="https://drive.google.com/uc?export=view&id=1hgAb12rQrumCFxwBhdJ3nQbMgdN_sK_j" alt="Acessando a porta 8080" style="width: 500px;">
 </div>
 <div style="margin-top: 20px;">
-<img src="https://drive.google.com/uc?export=view&id=1uteNKY0K8y1aUOPZ5NWukBn3KVu25cYh" alt="Página do Wordpress" width="500">
+<img src="https://drive.google.com/uc?export=view&id=1uteNKY0K8y1aUOPZ5NWukBn3KVu25cYh" alt="Página do Wordpress" style="width: 500px;">
 </div>
 
 ## 5. Acessando o Wordpress
 Após definir a linguagem desejada, siga as instruções para completar a configuração:
 
-<div style="margin-top: 20px;">
-<img src="https://drive.google.com/uc?export=view&id=1J3KzXBVTz86msNE0xgDMo3U13dVmXMjL" alt="Formulário do Wordpress" width="500">
+<div style="margin-top: 60px; margin-bottom: 60px;">
+<img src="https://drive.google.com/uc?export=view&id=1J3KzXBVTz86msNE0xgDMo3U13dVmXMjL" alt="Formulário do Wordpress" style="width: 500px;">
 </div>
+
 Concluída a configuração, faça login com suas credenciais. Na parte superior esquerda, clique no nome do projeto e acesse o site:
 
-<div style="margin-top: 20px;">
-<img src="https://drive.google.com/uc?export=view&id=10J-jVZiE58ZppulmojyyC1xg1dkQGJvt" alt="Dashboard do Wordpress" width="500">
+<div style="margin-top: 60px;">
+<img src="https://drive.google.com/uc?export=view&id=10J-jVZiE58ZppulmojyyC1xg1dkQGJvt" alt="Dashboard do Wordpress" style="width: 500px;">
 </div>
 <div style="margin-top: 20px;">
-<img src="https://drive.google.com/uc?export=view&id=1lpSqSyF36jfjj3entPw_l5ljApjtd-Nc" alt="Página do Wordpress" width="500">
+<img src="https://drive.google.com/uc?export=view&id=1lpSqSyF36jfjj3entPw_l5ljApjtd-Nc" alt="Página do Wordpress" style="width: 500px;">
 </div>
 
 # To Do
