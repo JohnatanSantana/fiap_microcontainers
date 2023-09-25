@@ -39,6 +39,10 @@ spec:
           image: mysql:5.7
           name: db
           resources: {}
+          ports:
+            - containerPort: 3306
+              hostPort: 3306
+              protocol: TCP
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: db
