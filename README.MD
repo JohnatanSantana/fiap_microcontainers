@@ -24,45 +24,51 @@ kubectl get nodes
 # Observe que possuímos uma única instância de K8S
 ```
 
-## 2. Clonar repositorio
-Todos os arquivos necessários para subir os serviços estão nesse repositorio, então vamos clonar ele dentro do nosso ambiente com seguinte comando:
+## 2. Clonando o Repositório
+Os arquivos necessários para inicializar os serviços estão neste repositório. Vamos cloná-lo:
 ```shell
 git clone https://github.com/JohnatanSantana/fiap_microcontainers.git
 ```
 
-# Acessando os arquivos
-Os arquivos estão na pasta k8s, para encontra-los utilize o seguinte comando:
+# Acessando os Arquivos do Projeto
+Navegue até a pasta k8s que contém os arquivos do projeto:
 ```shell
 cd fiap_microcontainers/k8s
 ```
 
-## 3. Aplicando as mudanças no kubernets
-Execute o comando abaixo para aplicar as alterações de todos os arquivos da pasta k8s
+## 3. Aplicando Configurações ao Kubernetes
+Com os arquivos em mãos, aplique todas as configurações contidas na pasta k8s:
 ```shell
 kubectl apply -f .
 ```
 
 ## 4. Acessar a pagina do Wordpress
-Em `Traffic Port Accessor`, acesse porta 8080 seguindo os passos abaixo:
+Use o Traffic Port Accessor para acessar a porta 8080. Siga as imagens abaixo para visualizar:
 
+<div style="margin-top: 15px;">
+<img src="https://drive.google.com/uc?export=view&id=1tSf5hICHJFP1ajAfWJ5rYYg_bG58iTYG" alt="Traffic Port Accessor" width="600">
+</div>
+<div style="margin-top: 15px;">
+<img src="https://drive.google.com/uc?export=view&id=1hgAb12rQrumCFxwBhdJ3nQbMgdN_sK_j" alt="Acessando a porta 8080" width="600">
+</div>
+<div style="margin-top: 15px;">
+<img src="https://drive.google.com/uc?export=view&id=1uteNKY0K8y1aUOPZ5NWukBn3KVu25cYh" alt="Página do Wordpress" width="600">
+</div>
 
-![`Traffic Port Accessor`](https://drive.google.com/uc?export=view&id=1tSf5hICHJFP1ajAfWJ5rYYg_bG58iTYG)
+## 5. Acessando o Wordpress
+Após definir a linguagem desejada, siga as instruções para completar a configuração:
 
-![`Acessando a porta 8080`](https://drive.google.com/uc?export=view&id=1hgAb12rQrumCFxwBhdJ3nQbMgdN_sK_j)
+<div style="margin-top: 15px;">
+<img src="https://drive.google.com/uc?export=view&id=1J3KzXBVTz86msNE0xgDMo3U13dVmXMjL" alt="Formulário do Wordpress" width="600">
+</div>
+Concluída a configuração, faça login com suas credenciais. Na parte superior esquerda, clique no nome do projeto e acesse o site:
 
-![`Pagina acessada`](https://drive.google.com/uc?export=view&id=1uteNKY0K8y1aUOPZ5NWukBn3KVu25cYh)
-
-## 4. Configure o Wordpress
-Após escolher a linguagem, preencha o formulario e instale o Wordpress.
-
-![`Formulario`](https://drive.google.com/uc?export=view&id=1J3KzXBVTz86msNE0xgDMo3U13dVmXMjL)
-
-Avance e faça login com o usuario e senha escolhida.
-Na parte superior esquerda, clique no nome do projeto e clique para visitar o site
-
-![`Formulario`](https://drive.google.com/uc?export=view&id=10J-jVZiE58ZppulmojyyC1xg1dkQGJvt)
-
-![`Pagina`](https://drive.google.com/uc?export=view&id=1lpSqSyF36jfjj3entPw_l5ljApjtd-Nc)
+<div style="margin-top: 15px;">
+<img src="https://drive.google.com/uc?export=view&id=10J-jVZiE58ZppulmojyyC1xg1dkQGJvt" alt="Dashboard do Wordpress" width="600">
+</div>
+<div style="margin-top: 15px;">
+<img src="https://drive.google.com/uc?export=view&id=1lpSqSyF36jfjj3entPw_l5ljApjtd-Nc" alt="Página do Wordpress" width="600">
+</div>
 
 # To Do
 - [ ] PV e PVC
