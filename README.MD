@@ -44,17 +44,17 @@ kubectl apply -f .
 
 ## 4. Acessar a pagina do Wordpress
 Em `Traffic Port Accessor`, acessar porta 8080
-![`Traffic Port Accessor`](https://drive.google.com/file/d/1tSf5hICHJFP1ajAfWJ5rYYg_bG58iTYG/view?usp=sharing)
-![`Acessando a porta 8080`](https://drive.google.com/file/d/1hgAb12rQrumCFxwBhdJ3nQbMgdN_sK_j/view?usp=sharing)
-![`Pagina acessada`](https://drive.google.com/file/d/1uteNKY0K8y1aUOPZ5NWukBn3KVu25cYh/view?usp=sharing)
+![`Traffic Port Accessor`](https://drive.google.com/uc?export=view&id=1tSf5hICHJFP1ajAfWJ5rYYg_bG58iTYG)
+![`Acessando a porta 8080`](https://drive.google.com/uc?export=view&id=1hgAb12rQrumCFxwBhdJ3nQbMgdN_sK_j)
+![`Pagina acessada`](https://drive.google.com/uc?export=view&id=1uteNKY0K8y1aUOPZ5NWukBn3KVu25cYh)
 
 ## 4. Configure o Wordpress
 Após escolher a linguagem, preencha o formulario e instale o Wordpress.
-![`Formulario`](https://drive.google.com/file/d/1J3KzXBVTz86msNE0xgDMo3U13dVmXMjL/view?usp=sharing)
+![`Formulario`](https://drive.google.com/uc?export=view&id=1J3KzXBVTz86msNE0xgDMo3U13dVmXMjL)
 Avance e faça login com o usuario e senha escolhida.
 Na parte superior esquerda, clique no nome do projeto e clique para visitar o site
-![`Formulario`](https://drive.google.com/file/d/10J-jVZiE58ZppulmojyyC1xg1dkQGJvt/view?usp=sharing)
-![`Formulario`](https://drive.google.com/file/d/1lpSqSyF36jfjj3entPw_l5ljApjtd-Nc/view?usp=sharing)
+![`Formulario`](https://drive.google.com/uc?export=view&id=10J-jVZiE58ZppulmojyyC1xg1dkQGJvt)
+![`Pagina`](https://drive.google.com/uc?export=view&id=1lpSqSyF36jfjj3entPw_l5ljApjtd-Nc)
 
 # To Do
 - [ ] PV e PVC
