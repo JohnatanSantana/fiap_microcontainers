@@ -1,33 +1,51 @@
-# Step by Step
+# Segue o passo a passo para subir o projeto.
 
-# Acessar killerCoda
-https://killercoda.com/playgrounds/scenario/ubuntu
+Nesse laboratório, iremos criar pods Kubernetes, utilizando o [k3s](https://k3s.io/) da [CNCF](https://www.cncf.io/projects/k3s/) para criação do cluster K8S, através de uma VM Ubuntu Server 20.04. Utilizar um ambiente [Ubuntu 20.04 no Killercoda](https://killercoda.com/playgrounds/scenario/ubuntu). Utilizaremos o programa de linha de comando `kubectl` para administração do cluster.
 
+## 1. Preparação do ambiente para laboratório
+Para esse laboratório, precisaremos realizar a instalação do Microk8s no host, que chamaremos de `Node 1`.
+```shell
 # Acessar usuário root
 sudo su
-
 # Instalar K3S com kubectl
 curl -sfL https://get.k3s.io | sh -
-
 # Habilitar permissão para usuário ubuntu obter configuração de acesso ao K8S
 echo K3S_KUBECONFIG_MODE=\"644\" >> /etc/systemd/system/k3s.service.env
-
 # Restart do serviço k3s para carregar nova config
 systemctl restart k3s
+```
 
-# Colar repo
+Verificar se o cluster está funcionando:
+```shell
+# Logar com usuário ubuntu (caso pedir senha, utilizar `ubuntu`)
+su ubuntu
+# Obter informações dos nós do cluster K8S
+kubectl get nodes
+# Observe que possuímos uma única instância de K8S
+```
+
+## 2. Clonar repositorio
+Todos os arquivos necessários para subir os serviços estão nesse repositorio, então vamos clonar ele dentro do nosso ambiente com seguinte comando:
 git clone https://github.com/JohnatanSantana/fiap_microcontainers.git
 
-# Acessar pasta k8s
-cd k8s
+# Acessando os arquivos
+Os arquivos estão na pasta k8s, para encontra-los utilize o seguinte comando:
+cd fiap_microcontainers/k8s
 
-# Aplicar 
-kubectl -f .
+## 3. Aplicando as mudanças no kubernets
+Execute o comando abaixo para aplicar as alterações de todos os arquivos da pasta k8s
+kubectl apply -f .
 
-# Acessar lado superior direito 
-Traffic / Ports
+## 4. Acessar a pagina do Wordpress
+Em `Traffic Port Accessor`, acessar porta 8080
+![`Traffic Port Accessor`](https://drive.google.com/file/d/1tSf5hICHJFP1ajAfWJ5rYYg_bG58iTYG/view?usp=sharing)
+![`Acessando a porta 8080`](https://drive.google.com/file/d/1hgAb12rQrumCFxwBhdJ3nQbMgdN_sK_j/view?usp=sharing)
+![`Pagina acessada`](https://drive.google.com/file/d/1uteNKY0K8y1aUOPZ5NWukBn3KVu25cYh/view?usp=sharing)
 
-Vai abrir uma pag web
+## 4. Configure o Wordpress
+Após escolher a linguagem, preencha o formulario e instale o Wordpress.
+![`Formulario`](https://drive.google.com/file/d/1J3KzXBVTz86msNE0xgDMo3U13dVmXMjL/view?usp=sharing)
+
 
 # To Do
 - [ ] PV e PVC
