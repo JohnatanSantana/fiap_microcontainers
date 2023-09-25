@@ -26,15 +26,21 @@ kubectl get nodes
 
 ## 2. Clonar repositorio
 Todos os arquivos necessários para subir os serviços estão nesse repositorio, então vamos clonar ele dentro do nosso ambiente com seguinte comando:
+```shell
 git clone https://github.com/JohnatanSantana/fiap_microcontainers.git
+```
 
 # Acessando os arquivos
 Os arquivos estão na pasta k8s, para encontra-los utilize o seguinte comando:
+```shell
 cd fiap_microcontainers/k8s
+```
 
 ## 3. Aplicando as mudanças no kubernets
 Execute o comando abaixo para aplicar as alterações de todos os arquivos da pasta k8s
+```shell
 kubectl apply -f .
+```
 
 ## 4. Acessar a pagina do Wordpress
 Em `Traffic Port Accessor`, acessar porta 8080
