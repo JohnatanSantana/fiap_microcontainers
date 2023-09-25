@@ -51,7 +51,10 @@ Em `Traffic Port Accessor`, acessar porta 8080
 ## 4. Configure o Wordpress
 Após escolher a linguagem, preencha o formulario e instale o Wordpress.
 ![`Formulario`](https://drive.google.com/file/d/1J3KzXBVTz86msNE0xgDMo3U13dVmXMjL/view?usp=sharing)
-
+Avance e faça login com o usuario e senha escolhida.
+Na parte superior esquerda, clique no nome do projeto e clique para visitar o site
+![`Formulario`](https://drive.google.com/file/d/10J-jVZiE58ZppulmojyyC1xg1dkQGJvt/view?usp=sharing)
+![`Formulario`](https://drive.google.com/file/d/1lpSqSyF36jfjj3entPw_l5ljApjtd-Nc/view?usp=sharing)
 
 # To Do
 - [ ] PV e PVC
