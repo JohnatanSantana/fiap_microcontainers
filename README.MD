@@ -5,14 +5,7 @@ Nesse laboratório, iremos criar pods Kubernetes, utilizando o [k3s](https://k3s
 ## 1. Preparação do ambiente para laboratório
 Para esse laboratório, precisaremos realizar a instalação do Microk8s no host, que chamaremos de `Node 1`.
 ```shell
-# Acessar usuário root
-sudo su
-# Instalar K3S com kubectl
-curl -sfL https://get.k3s.io | sh -
-# Habilitar permissão para usuário ubuntu obter configuração de acesso ao K8S
-echo K3S_KUBECONFIG_MODE=\"644\" >> /etc/systemd/system/k3s.service.env
-# Restart do serviço k3s para carregar nova config
-systemctl restart k3s
+sudo make install-k3s
 ```
 
 Verificar se o cluster está funcionando:
@@ -30,16 +23,11 @@ Os arquivos necessários para inicializar os serviços estão neste repositório
 git clone https://github.com/JohnatanSantana/fiap_microcontainers.git
 ```
 
-# Acessando os Arquivos do Projeto
-Navegue até a pasta k8s que contém os arquivos do projeto:
-```shell
-cd fiap_microcontainers/k8s
-```
 
 ## 3. Aplicando Configurações ao Kubernetes
-Com os arquivos em mãos, aplique todas as configurações contidas na pasta k8s:
+Aplique todas as configurações contidas na pasta k8s:
 ```shell
-kubectl apply -f .
+make k8s-create-all
 ```
 
 ## 4. Acessar a pagina do Wordpress
@@ -73,6 +61,7 @@ Concluída a configuração, faça login com suas credenciais. Na parte superior
 
 # To Do
 - [ ] PV e PVC
-- [ ] Criar Secrets
+- [X] Criar Secrets
 - [ ] Número de replicas
 - [ ] revisar anotations
+- [ ] limit resources
