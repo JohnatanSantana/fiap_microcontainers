@@ -1,10 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    kompose.cmd: kompose convert -f docker-compose.yaml
-    kompose.version: 1.30.0 (9d8dcb518)
-  creationTimestamp: null
   labels:
     io.kompose.service: wordpress
   name: wordpress
@@ -18,10 +14,6 @@ spec:
     type: Recreate
   template:
     metadata:
-      annotations:
-        kompose.cmd: kompose convert -f docker-compose.yaml
-        kompose.version: 1.30.0 (9d8dcb518)
-      creationTimestamp: null
       labels:
         io.kompose.network/docker-default: "true"
         io.kompose.service: wordpress
@@ -29,13 +21,25 @@ spec:
       containers:
         - env:
             - name: WORDPRESS_DB_HOST
-              value: db
+              valueFrom: 
+                secretKeyRef:
+                  key: MYSQL_HOST
+                  name: mysql-secrets
             - name: WORDPRESS_DB_NAME
-              value: exampledb
+              valueFrom: 
+                secretKeyRef:
+                  key: MYSQL_DATABASE
+                  name: mysql-secrets
             - name: WORDPRESS_DB_PASSWORD
-              value: examplepass
+              valueFrom: 
+                secretKeyRef:
+                  key: MYSQL_PASSWORD
+                  name: mysql-secrets
             - name: WORDPRESS_DB_USER
-              value: exampleuser
+              valueFrom: 
+                secretKeyRef:
+                  key: MYSQL_USER
+                  name: mysql-secrets
           image: wordpress
           name: wordpress
           ports:
