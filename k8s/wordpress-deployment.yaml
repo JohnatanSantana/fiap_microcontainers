@@ -45,13 +45,7 @@ spec:
             - containerPort: 80
               hostPort: 8080
               protocol: TCP
-          resources:
-            limits:
-              cpu: 2
-              memory: 3G
-            requests:
-              cpu: 1
-              memory: 1G
+          resources: {}
           volumeMounts:
             - mountPath: /var/www/html
               name: wordpress
