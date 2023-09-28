@@ -2,25 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    io.kompose.service: db
+    service: db
   name: db
-  namespace: default
+  namespace: mktdigital-wordpress
 spec:
   replicas: 2
   selector:
     matchLabels:
-      io.kompose.service: db
+      service: db
   strategy:
     type: Recreate
   template:
     metadata:
-      annotations:
-        kompose.cmd: kompose convert -f docker-compose.yaml
-        kompose.version: 1.30.0 (9d8dcb518)
-      creationTimestamp: null
       labels:
-        io.kompose.network/docker-default: "true"
-        io.kompose.service: db
+        service: db
     spec:
       containers:
         - env:
@@ -46,7 +41,13 @@ spec:
                   name: mysql-secrets
           image: mysql:5.7
           name: db
-          resources: {}
+          resources:
+            limits:
+              cpu: 2
+              memory: 4G
+            requests:
+              cpu: 1
+              memory: 1G
           ports:
             - containerPort: 3306
               hostPort: 3306

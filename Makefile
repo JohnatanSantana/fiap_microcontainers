@@ -17,11 +17,15 @@ setup-env: install-k3s validate-setup
 
 .PHONY: create-mysql-secret
 create-mysql-secret:
-	kubectl create secret generic mysql-secrets --from-env-file=./k8s/env-mysql.txt
+	kubectl create secret generic mysql-secrets --from-env-file=./k8s/env-mysql.txt -n mktdigital-wordpress
+
+.PHONY: create-namespace
+create-namespace:
+	kubectl create namespace mktdigital-wordpress
 
 .PHONY: k8s-apply
 k8s-apply:
 	kubectl apply -f ./k8s/
 
 .PHONY: k8s-create-all
-k8s-create-all: create-mysql-secret k8s-apply
+k8s-create-all: create-namespace create-mysql-secret k8s-apply

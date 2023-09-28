@@ -2,21 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    io.kompose.service: wordpress
+    service: wordpress
   name: wordpress
-  namespace: default
+  namespace: mktdigital-wordpress
 spec:
   replicas: 2
   selector:
     matchLabels:
-      io.kompose.service: wordpress
+      service: wordpress
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        io.kompose.network/docker-default: "true"
-        io.kompose.service: wordpress
+        service: wordpress
     spec:
       containers:
         - env:
@@ -46,7 +45,13 @@ spec:
             - containerPort: 80
               hostPort: 8080
               protocol: TCP
-          resources: {}
+          resources:
+            limits:
+              cpu: 2
+              memory: 2G
+            requests:
+              cpu: 1
+              memory: 1G
           volumeMounts:
             - mountPath: /var/www/html
               name: wordpress
