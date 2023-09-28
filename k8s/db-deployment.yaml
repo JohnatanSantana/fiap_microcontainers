@@ -41,10 +41,7 @@ spec:
                   name: mysql-secrets
           image: mysql:5.7
           name: db
-          resources:
-            limits:
-              cpu: 2
-              memory: 4G
+          resources: {}
           ports:
             - containerPort: 3306
               hostPort: 3306
